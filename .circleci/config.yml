@@ -25,3 +25,8 @@ jobs:
       - run:
           name: Assemble
           command: ./gradlew assemble
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
