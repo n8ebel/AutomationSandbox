@@ -12,6 +12,9 @@ jobs:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - run:
+          name: Check Dependency Versions
+          command: ./gradlew dependencyUpdates
+      - run:
           name: Check Code Formatting
           command: ./gradlew ktlintCheck
       - run:
