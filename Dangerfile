@@ -12,7 +12,7 @@ message "Release APK size: #{apk_size} MB"
 
 # Notify of outdated dependencies
 update_count = File.readlines("build/dependencyUpdates/report.txt").select { |line| line =~ /->/ }.count
-if update_count > 10
+if update_count > 15
   # More than 10 libraries to update is cumbersome in a comment, so summarize
   warn "There are #{update_count} dependencies with new milestone versions."
 elsif update_count > 0
