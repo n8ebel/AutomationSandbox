@@ -18,6 +18,7 @@ buildscript {
 
 plugins {
     id "org.jlleitschuh.gradle.ktlint" version "7.1.0"
+    id "com.github.ben-manes.versions" version "0.20.0"
 }
 
 allprojects {
@@ -26,7 +27,7 @@ allprojects {
     ktlint {
         version = "0.30.0"
         android = true
-        ignoreFailures = false
+        ignoreFailures = true
         reporters = [ReporterType.PLAIN, ReporterType.CHECKSTYLE]
 
         filter {
