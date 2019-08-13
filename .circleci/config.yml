@@ -12,11 +12,14 @@ jobs:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - run:
+          name: Check Code Formatting
+          command: ./gradlew ktlintCheck
+      - run:
           name: Run Tests
           command: ./gradlew test
       - run:
           name: Assemble
-          command: ./gradlew assemble
+          command: ./gradlew assemble --continue
 
 workflows:
   version: 2
