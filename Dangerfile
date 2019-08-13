@@ -20,3 +20,7 @@ elsif update_count > 0
   heading = "The following dependencies have later milestone versions:"
   warn file.slice(file.index(heading)..-1)
 end
+
+# Report inline ktlint issues
+checkstyle_format.base_path = Dir.pwd
+checkstyle_format.report 'app/build/reports/ktlint/ktlintMainSourceSetCheck.xml'
